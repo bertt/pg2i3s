@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="CommandLineParser" Version="2.6.0" />
+    <PackageReference Include="Dapper" Version="2.0.4" />
+    <PackageReference Include="i3s.tile" Version="0.1.0" />
+    <PackageReference Include="Npgsql" Version="4.0.9" />
+    <PackageReference Include="Wkx" Version="0.5.1" />
+  </ItemGroup>
+
+</Project>
