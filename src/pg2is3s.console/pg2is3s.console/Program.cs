@@ -1,4 +1,5 @@
 ﻿using Dapper;
+using I3s.Tile;
 using Npgsql;
 using System;
 using Wkx;
@@ -28,6 +29,10 @@ namespace pg2is3s.console
                 // todo: Write Scene layer package file (only buildings as a start)
                 // todo: write json files
                 // todo: write bin files (use I3sWriter.WriteI3s)
+                // sample code writing bin files:
+                // var i3s_file = new I3s.Tile.I3s();
+                // I3sWriter.WriteI3s(slpk_output, i3s_file);
+                // i3s_file.FeatureVertices = vertices;
                 // todo: zip it up to slpk
                 // todo: verify it works in client viewer
             }
