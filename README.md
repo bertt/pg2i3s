@@ -14,9 +14,36 @@ OGC Indexed 3d Scene Layer (I3S) and Scene Layer Package Format Specification: h
 
 ## Getting started
 
-Start a POSTGIS database and create table according to the SQL in sample_Data/buildings.sql.
 
-The testtable contains 100 polyhedredalsurface geometries in Amsterdam consisting of triangles.
+Start a POSTGIS database 
+
+```
+$ docker run --name some-postgis -e POSTGRES_PASSWORD=postgres -p 5432:5432 mdillon/postgis
+```
+
+Create table according to the SQL in sample_Data/buildings.sql:
+
+```
+$ psql -h localhost -U postgres -f buildings.sql
+```
+
+The testtable contains 100 polyhedredalsurface geometries in Amsterdam consisting of triangles:
+
+```
+$  psql -U postgres
+
+Password for user postgres:
+psql (11.5 (Ubuntu 11.5-3.pgdg16.04+1), server 11.2 (Debian 11.2-1.pgdg90+1))
+Type "help" for help.
+
+postgres=# select count(*) from public.buildings_3857;
+ count
+-------
+   100
+(1 row)
+
+postgres=#
+```
 
 Now change the connection string in Program.cs and get the project running.
 

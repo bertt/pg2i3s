@@ -18,7 +18,7 @@ namespace pg2is3s.console
             var conn = new NpgsqlConnection(connectionString);
             conn.Open();
 
-            var table = "bertt.buildings_3857";
+            var table = "buildings_3857";
             var geoms = conn.Query<Geometry>($"select ST_AsBinary(geom) as geometry from {table}").AsList();
             Console.WriteLine("Number of geometries: " + geoms.Count);
             foreach(var geom in geoms)
