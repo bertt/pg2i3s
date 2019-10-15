@@ -3,10 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29209.152
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "pg2is3s.console", "pg2is3s.console\pg2is3s.console.csproj", "{2FA683AB-B065-455C-A76D-B6B638BA0C33}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pg2is3s.console", "pg2is3s.console\pg2is3s.console.csproj", "{2FA683AB-B065-455C-A76D-B6B638BA0C33}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "doc", "doc", "{FFCB59B0-C748-4F69-8A83-7555FBD10AD8}"
 	ProjectSection(SolutionItems) = preProject
+		multipatch2slpk.md = multipatch2slpk.md
 		..\..\README.md = ..\..\README.md
 	EndProjectSection
 EndProject
