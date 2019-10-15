@@ -2,6 +2,8 @@
 
 Tools for converting 3D geometries (like buildings) from PostGIS to I3S Scene Layer Package file.
 
+See [multipatch2slpk.md](multipatch2slpk.md) for initial experiment creating slpk file from multipatch features using ArcGIS Pro.
+
 ## Disclaimer
 
 At the moment, this project really does nothing. Developers are welcome to contribute and get this project started.
