@@ -69,3 +69,14 @@ existing (Javascript) clients for visualization.
 - Wkx: For handling geometries https://github.com/cschwarz/wkx-sharp
 
 - CommandLineParser: For handling command line options: https://github.com/commandlineparser/commandline
+
+## Sample data
+
+- Folder Boston
+
+- Folder Germany
+
+Input multipatch shapefile with sample buildings. Process to create see https://github.com/Geodan/pg2b3dm/blob/master/dataprocessing/dataprocessing_citygml.md
+
+Output slpk is generated from the FME esrishape2i3s.fmw workbench using the i3s transformer.
+
