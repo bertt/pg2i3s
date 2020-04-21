@@ -2,8 +2,8 @@
 #! <WORKSPACE
 #    Command-line to run this workspace:
 #        "D:\Program Files\FME\fme.exe" D:\dev\github.com\bertt\pg2i3s\sample_Data\germany\esrishape2i3s.fmw
-#              --SourceDataset_ESRISHAPE "D:\aaa\multipatchshape\test1.shp\LoD2_280_5657_1_NW.shp"
-#              --DestDataset_I3S "D:\aaa\multipatchshape\i3s"
+#              --SourceDataset_ESRISHAPE "D:\dev\github.com\bertt\pg2i3s\sample_Data\germany\input\buildings_4326.shp"
+#              --DestDataset_I3S "D:\dev\github.com\bertt\pg2i3s\sample_Data\germany\output"
 #    
 #!   ATTR_TYPE_ENCODING="SDF"
 #!   BEGIN_PYTHON=""
@@ -12,14 +12,14 @@
 #!   DESCRIPTION=""
 #!   DESTINATION="NONE"
 #!   DESTINATION_ROUTING_FILE=""
-#!   DOC_EXTENTS="1572.98 71"
+#!   DOC_EXTENTS="1485.98 71"
 #!   DOC_TOP_LEFT="997.51 206.505"
 #!   END_PYTHON=""
 #!   END_TCL=""
 #!   EXPLICIT_BOOKMARK_ORDER="false"
 #!   FME_BUILD_NUM="19617"
-#!   FME_DOCUMENT_GUID="a60dc05e-99d9-47ba-9a6b-b2960c88f24a"
-#!   FME_DOCUMENT_PRIORGUID=""
+#!   FME_DOCUMENT_GUID="d1ba94a7-3a8a-4be9-8656-d5a097e92653"
+#!   FME_DOCUMENT_PRIORGUID="a60dc05e-99d9-47ba-9a6b-b2960c88f24a"
 #!   FME_GEOMETRY_HANDLING="Enhanced"
 #!   FME_IMPLICIT_CSMAP_REPROJECTION_MODE="Auto"
 #!   FME_REPROJECTION_ENGINE="FME"
@@ -28,7 +28,7 @@
 #!   HISTORY=""
 #!   IGNORE_READER_FAILURE="No"
 #!   LAST_SAVE_BUILD="FME(R) 2019.1.1.0 (20190801 - Build 19617 - WIN64)"
-#!   LAST_SAVE_DATE="2020-04-20T15:34:45"
+#!   LAST_SAVE_DATE="2020-04-21T11:47:18"
 #!   LOG_FILE=""
 #!   LOG_MAX_RECORDED_FEATURES="200"
 #!   MARKDOWN_DESCRIPTION=""
@@ -47,7 +47,7 @@
 #!   TITLE=""
 #!   USAGE=""
 #!   USE_MARKDOWN=""
-#!   VIEW_POSITION="417.504 700.007"
+#!   VIEW_POSITION="135.001 325.003"
 #!   WARN_INVALID_XFORM_PARAM="Yes"
 #!   WORKSPACE_VERSION="1"
 #!   ZOOM_SCALE="100"
@@ -66,7 +66,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE="SHAPE_GEOMETRY {FME_GEN_GEOMETRY}"
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="fme_rotation double multi_reader_full_id long fme_type char(50) fme_start_angle double fme_color char(50) fme_basename char(50) fme_secondary_axis double multi_reader_id long shape_geometry_error{} char(254) fme_fill_color char(50) fme_sweep_angle double fme_dataset char(50) SHAPE_GEOMETRY char(50) multi_reader_type char(50) fme_text_string char(50) fme_primary_axis double multi_reader_keyword char(50) shape_measures char(254) fme_feature_type char(50) fme_geometry char(50) fme_text_size double"
+#!   EXPOSABLE_ATTRS="fme_text_size double fme_feature_type char(50) fme_basename char(50) shape_geometry_error{} char(254) fme_dataset char(50) shape_measures char(254) fme_text_string char(50) fme_fill_color char(50) fme_secondary_axis double fme_start_angle double fme_color char(50) fme_primary_axis double multi_reader_full_id long fme_rotation double fme_sweep_angle double multi_reader_keyword char(50) multi_reader_id long fme_type char(50) multi_reader_type char(50) SHAPE_GEOMETRY char(50) fme_geometry char(50)"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES="Indexed"
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -124,7 +124,7 @@
 #!   WRITE_DEFS="true"
 #!   DEFLINE_TEMPLATE="i3s_type {FME_GEN_GEOMETRY}"
 #!   DEFLINE_ATTRS="true"
-#!   EXPOSABLE_ATTRS="fme_text_string string fme_basename string fme_start_angle float64 fme_geometry string fme_feature_type string fme_text_size float64 fme_type string fme_fill_color string fme_secondary_axis float64 fme_sweep_angle float64 fme_color string fme_rotation float64 fme_dataset string fme_primary_axis float64"
+#!   EXPOSABLE_ATTRS="fme_sweep_angle float64 fme_fill_color string fme_secondary_axis float64 fme_rotation float64 fme_color string fme_primary_axis float64 fme_type string fme_text_string string fme_start_angle float64 fme_dataset string fme_basename string fme_geometry string fme_text_size float64 fme_feature_type string"
 #!   DEFLINE_PARMS=""
 #!   ATTR_INDEX_TYPES=""
 #!   ATTR_NAME_INVALID_CHARS=""
@@ -708,24 +708,25 @@
 #!   PARMS_EDITED="true"
 #!   ENABLED="true"
 #!   HIDDEN_USER_ATTRS=""
-#!   MERGE_FILTER=""
+#!   MERGE_FILTER="*"
 #!   MERGE_FILTER_TYPE="FILTER_TYPE_GLOB"
 #!   MERGE_FILTER_CASE_SENSITIVE="true"
-#!   DYNAMIC_SCHEMA="false"
+#!   DYNAMIC_SCHEMA="true"
 #! >
 #!     <FEAT_ATTRIBUTE ATTR_NAME="gml_id" ATTR_TYPE="char(254)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="gml_name" ATTR_TYPE="char(254)" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_feature_type" ATTR_TYPE="char(50)"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! </FEATURE_TYPE>
 #! <FEATURE_TYPE
 #!   IS_SOURCE="false"
-#!   NODE_NAME="LoD2_280_5657_1_NW"
+#!   NODE_NAME="germany_buildings"
 #!   FEATURE_TYPE_NAME=""
 #!   FEATURE_TYPE_NAME_QUALIFIER=""
 #!   IS_EDITABLE="false"
 #!   IDENTIFIER="3"
 #!   FEAT_GEOMTYPE="i3s_3d_object"
 #!   POSITION="1972.4887248872481 277.50512505125039"
-#!   BOUNDING_RECT="1972.4887248872481 277.50512505125039 598.00106825772946 71"
+#!   BOUNDING_RECT="1972.4887248872481 277.50512505125039 511.00106825772946 71"
 #!   ORDER="500000000000017"
 #!   COLLAPSED="false"
 #!   KEYWORD="I3S_1"
@@ -735,6 +736,7 @@
 #! >
 #!     <FEAT_ATTRIBUTE ATTR_NAME="gml_id" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #!     <FEAT_ATTRIBUTE ATTR_NAME="gml_name" ATTR_TYPE="string" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
+#!     <FEAT_ATTRIBUTE ATTR_NAME="fme_feature_type" ATTR_TYPE="string"  EXPOSABLE_ATTR="true" ATTR_HAS_PORT="true" ATTR_VALUE=""/>
 #! </FEATURE_TYPE>
 #! </FEATURE_TYPES>
 #! <FMESERVER>
@@ -742,26 +744,26 @@
 #! <DATASET 
 #!   NAME="ESRISHAPE_1"
 #!   OVERRIDE="-ESRISHAPE_1_DATASET"
-#!   DATASET="ESRISHAPE_1/LoD2_280_5657_1_NW.shp"
+#!   DATASET="ESRISHAPE_1/buildings_4326.shp"
 #! />
 #! </READER_DATASETS>
 #! <WRITER_DATASETS>
 #! <DATASET 
 #!   NAME="I3S_1"
 #!   OVERRIDE="-I3S_1_DATASET"
-#!   DATASET="I3S_1/i3s"
+#!   DATASET="I3S_1/output"
 #! />
 #! </WRITER_DATASETS>
 #! </FMESERVER>
 #! <GLOBAL_PARAMETERS>
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI MULTIFILE SourceDataset_ESRISHAPE Shapefiles(*.shp)|*.shp|Compressed_Shapefiles(*.shz)|*.shz|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files(*)|* Source Esri Shapefile(s):"
-#!   DEFAULT_VALUE="D:\aaa\multipatchshape\test1.shp\LoD2_280_5657_1_NW.shp"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)input\buildings_4326.shp"
 #!   IS_STAND_ALONE="false"
 #! />
 #! <GLOBAL_PARAMETER
 #!   GUI_LINE="GUI DIRNAME DestDataset_I3S Destination Indexed 3D Layer Folder:"
-#!   DEFAULT_VALUE="D:\aaa\multipatchshape\i3s"
+#!   DEFAULT_VALUE="$(FME_MF_DIR)output"
 #!   IS_STAND_ALONE="false"
 #! />
 #! </GLOBAL_PARAMETERS>
@@ -798,9 +800,9 @@
 
 FME_PYTHON_VERSION 37
 GUI IGNORE SourceDataset_ESRISHAPE_1,ESRISHAPE_IN_READER_PARAMETERS_ESRISHAPE_1,ESRISHAPE_IN_ENCODING_ESRISHAPE_1,ESRISHAPE_IN_USE_SEARCH_ENVELOPE_ESRISHAPE_1,ESRISHAPE_IN_SEARCH_ENVELOPE_MINX_ESRISHAPE_1,ESRISHAPE_IN_SEARCH_ENVELOPE_MINY_ESRISHAPE_1,ESRISHAPE_IN_SEARCH_ENVELOPE_MAXX_ESRISHAPE_1,ESRISHAPE_IN_SEARCH_ENVELOPE_MAXY_ESRISHAPE_1,ESRISHAPE_IN_SEARCH_ENVELOPE_COORDINATE_SYSTEM_ESRISHAPE_1,ESRISHAPE_IN_CLIP_TO_ENVELOPE_ESRISHAPE_1,ESRISHAPE_IN_ADVANCED_ESRISHAPE_1,ESRISHAPE_IN_TRIM_PRECEDING_SPACES_ESRISHAPE_1,ESRISHAPE_IN_GEOMETRY_ESRISHAPE_1,ESRISHAPE_IN_SIMPLE_DONUT_GEOMETRY_ESRISHAPE_1,ESRISHAPE_IN_MEASURES_AS_Z_ESRISHAPE_1,ESRISHAPE_IN_DISSOLVE_HOLES_ESRISHAPE_1,ESRISHAPE_IN_REPORT_BAD_GEOMETRY_ESRISHAPE_1,ESRISHAPE_IN_NETWORK_AUTHENTICATION_ESRISHAPE_1,DestDataset_I3S_1,I3S_OUT_PARAMETERS_GROUP_I3S_1,I3S_OUT_MAX_FACES_PER_TILE_I3S_1
-DEFAULT_MACRO SourceDataset_ESRISHAPE D:\aaa\multipatchshape\test1.shp\LoD2_280_5657_1_NW.shp
+DEFAULT_MACRO SourceDataset_ESRISHAPE $(FME_MF_DIR)input\buildings_4326.shp
 GUI MULTIFILE SourceDataset_ESRISHAPE Shapefiles(*.shp)|*.shp|Compressed_Shapefiles(*.shz)|*.shz|Compressed_Files(*.bz2;*.gz)|*.bz2;*.gz|Archive_Files(*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx)|*.7z;*.7zip;*.rar;*.rvz;*.tar;*.tar.bz2;*.tar.gz;*.tgz;*.zip;*.zipx|All_Files(*)|* Source Esri Shapefile(s):
-DEFAULT_MACRO DestDataset_I3S D:\aaa\multipatchshape\i3s
+DEFAULT_MACRO DestDataset_I3S $(FME_MF_DIR)output
 GUI DIRNAME DestDataset_I3S Destination Indexed 3D Layer Folder:
 INCLUDE [ if {{$(SourceDataset_ESRISHAPE)} == {}} { puts_real {Parameter 'SourceDataset_ESRISHAPE' must be given a value.}; exit 1; }; ]
 INCLUDE [ if {{$(DestDataset_I3S)} == {}} { puts_real {Parameter 'DestDataset_I3S' must be given a value.}; exit 1; }; ]
@@ -1000,17 +1002,17 @@ ESRISHAPE_1_DEF LoD2_280_5657_1_NW   SHAPE_GEOMETRY               shape_multipat
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * RoutingFactory   FACTORY_NAME "Router and Unexpected Input Remover"   COMMAND_PARM_EVALUATION SINGLE_PASS   MULTI_READER_KEYWORD $(DATASET_KEYWORD_ESRISHAPE_1)   INPUT FEATURE_TYPE *    ROUTE ESRISHAPE ESRISHAPE_1::LoD2_280_5657_1_NW multi_reader_keyword,$(DATASET_KEYWORD_ESRISHAPE_1) TO FME_GENERIC ::LoD2_280_5657_1_NW ALIAS_GEOMETRY    MERGE_INPUT Yes   OUTPUT ROUTED FEATURE_TYPE *
-ESRISHAPE_1_MERGE_DEF ESRISHAPE_1::LoD2_280_5657_1_NW EXACT LoD2_280_5657_1_NW
+ESRISHAPE_1_MERGE_DEF ESRISHAPE_1::LoD2_280_5657_1_NW GLOB *
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory    FACTORY_NAME "LoD2_280_5657_1_NW (ESRISHAPE_1) Splitter"    INPUT FEATURE_TYPE LoD2_280_5657_1_NW    OUTPUT FEATURE_TYPE LoD2_280_5657_1_NW_ESRISHAPE_1
 DEFAULT_MACRO WB_CURRENT_CONTEXT
 # -------------------------------------------------------------------------
 
-FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC LoD2_280_5657_1_NW_ESRISHAPE_1 TO I3S __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>LoD2_280_5657_1_NW<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
+FACTORY_DEF * RoutingFactory FACTORY_NAME "Destination Feature Type Routing Correlator"   COMMAND_PARM_EVALUATION SINGLE_PASS   INPUT FEATURE_TYPE *    ROUTE FME_GENERIC LoD2_280_5657_1_NW_ESRISHAPE_1 TO I3S __GO_TO_FINAL_OUTPUT_ROUTER__ multi_writer_id,0,<at>SupplyAttributes<openparen>ENCODED<comma>__wb_out_feat_type__<comma>germany_buildings<closeparen> GEOMETRY   FEATURE_TYPE_ATTRIBUTE __wb_out_feat_type__   OUTPUT ROUTED FEATURE_TYPE *    OUTPUT NOT_ROUTED FEATURE_TYPE __nuke_me__ @Tcl2("FME_StatMessage 818059 [FME_GetAttribute fme_template_feature_type] 818060 818061 fme_warn")
 # -------------------------------------------------------------------------
 
 FACTORY_DEF * TeeFactory   FACTORY_NAME "Final Output Nuker"   INPUT FEATURE_TYPE __nuke_me__
 
 # -------------------------------------------------------------------------
-I3S_1_DEF LoD2_280_5657_1_NW   i3s_type                     i3s_3d_object   gml_id                       string   gml_name                     string
+I3S_1_DEF germany_buildings   i3s_type                     i3s_3d_object   gml_id                       string   gml_name                     string
